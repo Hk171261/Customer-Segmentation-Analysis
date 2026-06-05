@@ -7,6 +7,8 @@ import plotly.graph_objects as go
 kmeans=joblib.load('kmeans_model.pkl')
 scaler=joblib.load('scaler.pkl')
 
+st.set_page_config(page_title="Customer Segment Analysis", page_icon="👥", layout="wide")
+
 SEGMENT_INFO = {
     0: {"name": "Mature Mid-Spenders",      "color": "#639922"},
     1: {"name": "Older Digital Buyers",      "color": "#378ADD"},
@@ -55,7 +57,7 @@ div.stButton > button:hover {
 """, unsafe_allow_html=True)
 
 
-st.title('Customer Segmentation App')
+st.title('Customer Segmentation Analysis 🎯')
 st.write('Enter Customer Details to Predict Segment:')
 
 col1, col2, col3 = st.columns(3)
